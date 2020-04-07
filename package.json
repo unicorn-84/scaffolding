@@ -1,0 +1,17 @@
+{
+  "name": "web-scaffolding",
+  "version": "0.0.0",
+  "description": "Scaffolding for web development",
+  "private": true,
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unicorn-84/web-scaffolding.git"
+  },
+  "author": "unicorn-84 <unicorn-84@ya.ru> (https://github.com/unicorn-84)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unicorn-84/web-scaffolding/issues"
+  },
+  "homepage": "https://github.com/unicorn-84/web-scaffolding#readme"
+}
