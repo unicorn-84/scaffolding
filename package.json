@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "description": "Scaffolding for web development",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "server": "webpack-dev-server --mode development"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/unicorn-84/web-scaffolding.git"
@@ -15,11 +19,34 @@
   },
   "homepage": "https://github.com/unicorn-84/web-scaffolding#readme",
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "@fullhuman/postcss-purgecss": "^2.1.2",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.5.1",
+    "cssnano": "^4.1.10",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "html-webpack-plugin": "^4.0.4",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-nested": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^8.0.2",
+    "tailwindcss": "^1.2.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
