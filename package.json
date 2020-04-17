@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "webpack --mode development",
-    "build": "cross-env NODE_ENV=production webpack --mode production",
-    "server": "webpack-dev-server --mode development"
+    "build": "webpack --env.production --mode production",
+    "server": "webpack-dev-server --mode development",
+    "start": "npm run build && npm run nomodule"
   },
   "repository": {
     "type": "git",
