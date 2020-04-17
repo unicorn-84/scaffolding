@@ -1,22 +1,22 @@
-const path = require('path')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const prod = process.env.NODE_ENV === 'production'
+const prod = process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry: {
-    main: path.resolve('src', 'index.mjs')
+    main: path.resolve('src', 'index.mjs'),
   },
   output: {
-    filename: prod ? '[name].[contenthash:4].mjs' : '[name].mjs'
+    filename: prod ? '[name].[contenthash:4].mjs' : '[name].mjs',
   },
   devServer: {
     stats: 'errors-only',
     overlay: true,
     compress: true,
-    port: 4000
+    port: 4000,
   },
   devtool: prod ? 'source-map' : 'eval',
   module: {
@@ -28,16 +28,16 @@ module.exports = {
           {
             loader: 'pug-loader',
             options: {
-              pretty: !prod
-            }
-          }
-        ]
+              pretty: !prod,
+            },
+          },
+        ],
       },
       {
         test: /\.m?js$/,
         use: [
-          'babel-loader'
-        ]
+          'babel-loader',
+        ],
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -45,15 +45,15 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
-          'sass-loader'
-        ]
-      }
-    ]
+          'sass-loader',
+        ],
+      },
+    ],
   },
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: prod ? '[name].[contenthash:4].css' : '[name].css'
+      filename: prod ? '[name].[contenthash:4].css' : '[name].css',
     }),
     new HtmlWebpackPlugin({
       template: path.resolve('src', 'index.pug'),
@@ -62,8 +62,8 @@ module.exports = {
         removeComments: prod,
         minifyCSS: prod,
         minifyJS: prod,
-        collapseWhitespace: prod
-      }
-    })
-  ]
-}
+        collapseWhitespace: prod,
+      },
+    }),
+  ],
+};

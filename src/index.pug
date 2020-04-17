@@ -6,8 +6,8 @@ html(lang="ru")
     title Document
     each cssFile in htmlWebpackPlugin.files.css
       link(rel='stylesheet', href= cssFile.substr(htmlWebpackPlugin.files.publicPath.length))
-  body
-    h1.text-gray-700 Scaffolding
+  body.flex.flex-col.flex-no-wrap.items-center.justify-center.min-h-screen
+    h1.text-center.text-gray-900.font-black.text-xl.antialiased.tracking-wide Web scaffolding
     each jsFile in htmlWebpackPlugin.files.js
       if jsFile.search(/mjs/) !== -1
         script(type='module', src= jsFile.substr(htmlWebpackPlugin.files.publicPath.length))
