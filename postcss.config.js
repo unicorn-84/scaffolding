@@ -1,4 +1,4 @@
-const prod = process.env.NODE_ENV === 'production'
+const prod = process.env.NODE_ENV === 'production';
 
 module.exports = () => ({
   plugins: {
@@ -8,14 +8,14 @@ module.exports = () => ({
     'postcss-preset-env': { stage: 1 },
     '@fullhuman/postcss-purgecss': prod ? {
       content: ['./src/**/*.pug'],
-      defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || []
+      defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
     } : false,
     cssnano: prod ? {
       preset: ['default', {
         discardComments: {
-          removeAll: true
-        }
-      }]
-    } : false
-  }
-})
+          removeAll: true,
+        },
+      }],
+    } : false,
+  },
+});
