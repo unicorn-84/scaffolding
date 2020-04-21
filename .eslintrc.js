@@ -22,13 +22,13 @@ module.exports = {
     'react',
   ],
   rules: {
-    "no-console": [
-      "error",
+    'no-console': [
+      'error',
       {
-        "allow": [
-          "log",
-        ]
-      }
+        allow: [
+          'log',
+        ],
+      },
     ],
   },
 };
