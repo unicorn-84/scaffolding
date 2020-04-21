@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "webpack --mode development",
-    "build": "webpack --env.production --mode production",
-    "server": "webpack-dev-server --mode development",
-    "start": "npm run build && npm run nomodule"
+    "start": "webpack --env.production --mode production",
+    "server": "webpack-dev-server --mode development"
   },
   "repository": {
     "type": "git",
